@@ -1,0 +1,15 @@
+//La funcion//
+
+///
+Esta funcion toma como entrada las fechas de inicio y fin del período
+y un límite para el número de productos a mostrar en el informe en este caso 
+IN fecha_inicio y IN fecha_fin son parámetros de entrada que se utilizan para especificar 
+el período de tiempo de la consulta y
+IN limite es un parámetro de entrada que limita el número de 
+productos mostrados en el informe.
+///
+
+///
+Este codigo de funcion almacenada son solo un punto de partida y
+pueden adaptarse según las necesidades específicas 
+///
