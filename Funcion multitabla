@@ -1,5 +1,0 @@
-// Funcion multitabla
-
-SELECT pedidos.*, clientes.nombre AS nombre_cliente
-FROM pedidos
-JOIN clientes ON pedidos.id_cliente = clientes.id;

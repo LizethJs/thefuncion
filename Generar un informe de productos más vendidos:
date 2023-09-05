@@ -1,0 +1,16 @@
+// Funcion multitabla
+CREATE PROCEDURE ProductosMasVendidos (
+    IN fecha_inicio DATE,
+    IN fecha_fin DATE,
+    IN limite INT
+)
+BEGIN
+    SELECT productos.nombre, SUM(detalle_venta.cantidad) AS cantidad_vendida
+    FROM detalle_venta
+    JOIN productos ON detalle_venta.producto_id = productos.id
+    JOIN ventas ON detalle_venta.venta_id = ventas.id
+    WHERE ventas.fecha_venta BETWEEN fecha_inicio AND fecha_fin
+    GROUP BY productos.nombre
+    ORDER BY cantidad_vendida DESC
+    LIMIT limite;
+END;
